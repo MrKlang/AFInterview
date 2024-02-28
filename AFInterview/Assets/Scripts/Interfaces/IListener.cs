@@ -1,7 +1,6 @@
-
 namespace AFSInterview
 {
-    public interface IMoneyListener
+    public interface IListener
     {
         void AttachObserver(IObserver observer);
 

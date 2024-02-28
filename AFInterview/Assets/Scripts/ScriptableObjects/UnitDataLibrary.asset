@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0812074724a3047bdec3f7f6efbd87, type: 3}
+  m_Name: UnitDataLibrary
+  m_EditorClassIdentifier: 
+  unitDatas:
+  - id: 0
+    unitType: Long Sword Knight
+    unitAttributes: 01000000
+    maxHp: 10
+    armour: 2
+    attackIntervalInTurns: 1
+    damageDealtPerAttack: 3
+    unitDamageOverrides:
+    - unitAttribute: 0
+      additionalDamageToAttribute: 2
+    - unitAttribute: 2
+      additionalDamageToAttribute: -2
+    - unitAttribute: 1
+      additionalDamageToAttribute: -1
+  - id: 1
+    unitType: Archer
+    unitAttributes: 00000000
+    maxHp: 5
+    armour: 0
+    attackIntervalInTurns: 1
+    damageDealtPerAttack: 2
+    unitDamageOverrides:
+    - unitAttribute: 1
+      additionalDamageToAttribute: -1
+    - unitAttribute: 2
+      additionalDamageToAttribute: -2
+  - id: 2
+    unitType: Druid
+    unitAttributes: 00000000
+    maxHp: 7
+    armour: 1
+    attackIntervalInTurns: 2
+    damageDealtPerAttack: 2
+    unitDamageOverrides:
+    - unitAttribute: 0
+      additionalDamageToAttribute: 1
+    - unitAttribute: 1
+      additionalDamageToAttribute: -1
+    - unitAttribute: 2
+      additionalDamageToAttribute: -2
+  - id: 3
+    unitType: Catapult
+    unitAttributes: 02000000
+    maxHp: 15
+    armour: 3
+    attackIntervalInTurns: 3
+    damageDealtPerAttack: 5
+    unitDamageOverrides:
+    - unitAttribute: 0
+      additionalDamageToAttribute: 2
+    - unitAttribute: 1
+      additionalDamageToAttribute: 1
+    - unitAttribute: 2
+      additionalDamageToAttribute: -1
+  - id: 4
+    unitType: Ram
+    unitAttributes: 0100000002000000
+    maxHp: 15
+    armour: 3
+    attackIntervalInTurns: 3
+    damageDealtPerAttack: 5
+    unitDamageOverrides:
+    - unitAttribute: 1
+      additionalDamageToAttribute: 2
+    - unitAttribute: 2
+      additionalDamageToAttribute: 1
+    - unitAttribute: 0
+      additionalDamageToAttribute: -1

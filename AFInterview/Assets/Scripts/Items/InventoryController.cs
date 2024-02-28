@@ -4,7 +4,7 @@
     using System.Linq;
     using UnityEngine;
 
-	public class InventoryController : MonoBehaviour, IMoneyListener
+	public class InventoryController : MonoBehaviour, IListener
 	{
 		[SerializeField] private List<Item> items;
 		[SerializeField] private int money;

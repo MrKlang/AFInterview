@@ -12,12 +12,12 @@
 		[SerializeField] private GameObject itemPrefab;
 		[SerializeField] private BoxCollider itemSpawnArea;
 		[SerializeField] private float itemSpawnInterval;
-		[SerializeField] private ItemUsageDataLibrary itemData;
+		[SerializeField] private ItemUsageDataLibrary itemsLibrary;
 
 		private TextMeshProUGUI moneyText;
 		private WaitForSeconds spawningInterval;
 
-		public ItemUsageDataLibrary ItemDataLibrary => itemData;
+		public ItemUsageDataLibrary ItemDataLibrary => itemsLibrary;
 
 		private void Awake()
 		{
