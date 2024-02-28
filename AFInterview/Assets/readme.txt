@@ -3,8 +3,8 @@ Welcome to the AF Interview Project. This test consists of 2 parts. The first on
 Your tasks for today are as follows:
 Part 1:
 a) Find a bug in the code logic and fix it
-b) Optimize the ItemsManager class code
-c) Extend the whole system by introducing a concept of a consumable item, that upon using, will either add money or a different item to the inventory.
+b) Optimize the ItemsManager class code(OK)
+c) Extend the whole system by introducing a concept of a consumable item, that upon using, will either add money or a different item to the inventory.(OK)
 
 Part 2:
 Implement a system that will be used to execute fights between certain army units.
@@ -20,7 +20,7 @@ Unit should specify its:
 -an optional attack damage override value against units with a specific attribute (OK)
 
 The damage dealt should be calculated by taking the attack damage and subtracting the armor points. The final damage dealt can not fall below the value of 1 in any case. (OK)
-When the health points of a unit reach 0, the unit should be considered unable to fight and should be removed from the army.
+When the health points of a unit reach 0, the unit should be considered unable to fight and should be removed from the army.(OK)
 
 Set up a turn-based fight between 2 armies, one spawned on the left side of the screen and the other on the right side:
 2 Long Sword Knights
@@ -33,7 +33,7 @@ versus
 1 Catapult
 1 Ram
 
-The fight turn order should be determined randomly at the start of the fight and kept for its whole duration.
+The fight turn order should be determined randomly at the start of the fight and kept for its whole duration.(OK)
 Assume that all of the units are always within the required range to attack any enemy unit. (OK)
 Make sure that editing all of the balance-related values is designer-friendly. (OK)
 Providing an animated visual representation of the fight will be considered a plus. (OK-meh)

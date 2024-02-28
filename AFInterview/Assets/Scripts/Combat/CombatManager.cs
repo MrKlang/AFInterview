@@ -119,8 +119,12 @@ namespace AFSInterview
 
                 if(firstIndex < firstTeam.Count)
                 {
-                    firstTeam[firstIndex].PlayAttackAnimation();
-                    firstTeam[firstIndex].AttackEnemy(secondTeam[firstEnemyIndex]);
+                    if (firstTeam[firstIndex].CanAttack())
+                    {
+                        firstTeam[firstIndex].PlayAttackAnimation();
+                        firstTeam[firstIndex].AttackEnemy(secondTeam[firstEnemyIndex]);
+                    }
+                    
                     firstIndex++;
                 }
 
@@ -128,10 +132,20 @@ namespace AFSInterview
 
                 if (secondIndex < secondTeam.Count)
                 {
-                    secondTeam[secondIndex].PlayAttackAnimation();
-                    secondTeam[secondIndex].AttackEnemy(firstTeam[secondEnemyIndex]);
+                    if (secondTeam[secondIndex].CanAttack())
+                    {
+                        secondTeam[secondIndex].PlayAttackAnimation();
+                        secondTeam[secondIndex].AttackEnemy(firstTeam[secondEnemyIndex]);
+                    }
+                    
                     secondIndex++;
                 }
+#if (UNITY_EDITOR)
+                else
+                {
+                    Debug.Log($"Waiting turn for {secondTeam[secondIndex].name}");
+                }
+#endif
 
                 yield return automaticTurnInterval;
             }

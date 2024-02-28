@@ -16,6 +16,7 @@ namespace AFSInterview
 
         private UnitData unitData;
         private int unitAmount;
+        private int turnsToAttack;
 
         public void Setup(UnitData data, int amount)
         {
@@ -31,6 +32,20 @@ namespace AFSInterview
             }
         }
 
+        public bool CanAttack()
+        {
+            turnsToAttack--;
+            if(turnsToAttack > 0)
+            {
+#if (UNITY_EDITOR)
+                Debug.Log($"Waiting turn for {unitData.unitType}");
+#endif
+                return false;
+            }
+
+            return true;
+        }
+
         public void AttackEnemy(Unit unit)
         {
             var currentDamage = unitData.damageDealtPerAttack;
@@ -44,6 +59,7 @@ namespace AFSInterview
             }
 
             unit.TakeDamage(currentDamage);
+            turnsToAttack = unitData.attackIntervalInTurns;
         }
 
         public void TakeDamage(int incomingDamage)
